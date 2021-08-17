@@ -28,13 +28,11 @@ export class AppComponent implements OnInit {
 
   add(name: string): void {
     this.todos.unshift(this.newElement(name));
-    this.todos = cloneDeep(this.todos);
   }
 
   finalize({id, completed}: TodoData): void {
     const index = this.todos.findIndex(todo => todo.id === id);
     this.todos[index].completed = !completed;
-    this.todos = cloneDeep(this.todos);
   }
 
   delete(id: string): void {
