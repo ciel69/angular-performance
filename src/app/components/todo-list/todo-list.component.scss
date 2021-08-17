@@ -1,0 +1,38 @@
+.todo {
+  &-list {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px 5px;
+    max-height: 600px;
+    overflow: auto;
+  }
+
+  &-title {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  &-num {
+    background: var(--bgColor-light-green);
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  &-element {
+    display: flex;
+    //justify-content: space-between;
+    margin: 5px;
+
+    &.completed {
+      text-decoration: line-through;
+    }
+
+    .delete {
+      background-color: transparent;
+      color: #666;
+      border: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

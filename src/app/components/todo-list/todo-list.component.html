@@ -1,0 +1,14 @@
+<div class="todo-list">
+  <label
+    *ngFor="let todo of list"
+    class="todo-element"
+    [class.completed]="todo.completed"
+  >
+    <p-checkbox value="val1" [ngModel]="todo.completed" binary="true" (click)="finalize.emit(todo)"></p-checkbox>
+    <span class="todo-title">
+      {{todo.label}}
+      <span class="todo-num">{{calculate(todo.num)}}</span>
+    </span>
+    <button pButton icon="pi pi-trash" class="delete" (click)="delete.emit(todo.id)"></button>
+  </label>
+</div>
